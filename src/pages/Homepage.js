@@ -8,8 +8,8 @@ export default function Homepage() {
       <NavLink to="/explore" className="link home-link">
         Explore
       </NavLink>
-      <NavLink to="/random" className="link home-link">
-        Random
+      <NavLink to="/neo" className="link home-link">
+        NEO
       </NavLink>
       <NavLink to="/profil" className="link home-link">
         Profile

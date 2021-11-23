@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './navbar.css'
 import { AiFillHome, AiFillProfile } from 'react-icons/ai'
 import { MdExplore } from 'react-icons/md'
-import { FaRandom } from 'react-icons/fa'
+import { GiAsteroid } from 'react-icons/gi'
 
 export default function navbar() {
   return (
@@ -14,8 +14,8 @@ export default function navbar() {
       <NavLink to="/explore" className="link nav-link">
         <MdExplore className="icon" /> Explore
       </NavLink>
-      <NavLink to="/random" className="link nav-link">
-        <FaRandom className="icon" /> Random
+      <NavLink to="/neo" className="link nav-link">
+        <GiAsteroid className="icon" /> NEO
       </NavLink>
       <NavLink to="/profile" className="link nav-link">
         <AiFillProfile className="icon" /> Profile

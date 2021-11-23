@@ -52,14 +52,10 @@ export default function Apod(props) {
                     return (
                       <div key={index}>
                         <NavLink
-                          to={`/explore/${apod.url.replace('https://', '')}/${
-                            apod.title
-                          }/${apod.explanation}`}
+                          to={`/explore/${apod.title}/${apod.explanation}`}
                           onClick={() =>
                             history.push(
-                              `/explore/${apod.url.replace('https://', '')}/${
-                                apod.title
-                              }/${apod.explanation}`
+                              `/explore/${apod.title}/${apod.explanation}`
                             )
                           }
                         >
