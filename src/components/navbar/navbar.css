@@ -1,0 +1,14 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0px 20px;
+    text-decoration: none;
+    position: sticky;
+    z-index: 11;
+    bottom: 0%;
+}
+.button p{
+    color: black;
+}
