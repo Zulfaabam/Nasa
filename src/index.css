@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --dark: rgb(34, 34, 34);
+  --dark-hvr: rgb(68, 68, 68);
+  --blue: rgb(66, 170, 240);
+  --trans: all 300ms ease-in-out;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  color: rgb(66, 170, 240);
+}

@@ -1,22 +1,82 @@
-.slider {
-  position: relative;
-  height: 92vh;
+.home {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  z-index: 0;
-	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+  gap: 1rem;
 }
-.slider h1{
-  text-align: center;
+
+.home-link {
+  background-color: var(--dark);
   color: white;
+  text-decoration: none;
+  width: 100px;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--trans);
 }
-.content img { 
-  margin: auto;
+
+.home-link:hover {
+  background-color: var(--dark-hvr);
+}
+
+.apod {
+  background: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=893&q=80);
+}
+
+.explore-content {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  gap: 0.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.explore-content h1 {
+  font-size: 20px;
+}
+
+.explore-content img {
+  margin: 0 auto;
   width: 300px;
   height: 250px;
   border-radius: 10px;
+}
 
+.explore-content p {
+  color: white;
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+
+header {
+  width: 100%;
+  font-size: 12px;
+  position: fixed;
+  top: 0%;
+  /* border-bottom: 1px white solid; */
+  z-index: 10;
+  background: var(--dark);
+}
+
+header h1 {
+  text-align: center;
+  color: white;
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .right-arrow {
@@ -39,45 +99,4 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
-}
-
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-}
-.content{
-  display: flex;
-  top: 20%;
-  flex-direction: column;
-  align-items: center;
-}
-.content h1{
-  font-size: 20px;
-}
-.header{
-  width: 100%;
-  font-size: 12px;
-  position: sticky;
-  top: 0%;
-  border-bottom: 2px white solid;
-}
-.loading{
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.seemore{
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  color: white;
 }
