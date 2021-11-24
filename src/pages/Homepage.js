@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 export default function Homepage() {
   return (
     <div className="home" id="home">
-      <h1>APOD NASA</h1>
-      <NavLink to="/explore" className="link home-link">
-        Explore
+      <h1>NASA</h1>
+      <NavLink to="/apod" className="link home-link">
+        APOD
       </NavLink>
       <NavLink to="/neo" className="link home-link">
         NEO

@@ -19,9 +19,9 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path="/" element={<Homepage />}></Route>
-          <Route exact path="/explore" element={<Apod />}></Route>
+          <Route exact path="/apod" element={<Apod />}></Route>
           <Route
-            path="/explore/:apodTitle/:apodExplanation"
+            path="/apod/:apodTitle/:apodExplanation"
             element={<ApodDetail />}
           ></Route>
           <Route path="/neo" element={<Neo />}></Route>

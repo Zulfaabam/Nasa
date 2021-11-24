@@ -38,7 +38,7 @@ export default function Apod(props) {
   return (
     <div className="apod">
       <header className="header">
-        <h1>APOD</h1>
+        <h1>Astronomy Picture of The Day</h1>
       </header>
       {photoData !== null && (
         <div>
@@ -52,10 +52,17 @@ export default function Apod(props) {
                     return (
                       <div key={index}>
                         <NavLink
-                          to={`/explore/${apod.title}/${apod.explanation}`}
+                          to={`/apod/${apod.title}/${
+                            apod.explanation === null || undefined || ''
+                              ? 'No Explanation'
+                              : apod.explanation.replace(',', ' ')
+                          }`}
                           onClick={() =>
                             history.push(
-                              `/explore/${apod.title}/${apod.explanation}`
+                              `/apod/${apod.title}/${apod.explanation.replace(
+                                ',',
+                                ' '
+                              )}`
                             )
                           }
                         >

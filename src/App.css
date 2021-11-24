@@ -7,12 +7,17 @@
   gap: 1rem;
 }
 
+.home h1 {
+  color: white;
+}
+
 .home-link {
   background-color: var(--dark);
   color: white;
   text-decoration: none;
   width: 100px;
   padding: 1rem;
+  border: 1px solid var(--blue);
   border-radius: 10px;
   text-align: center;
   transition: var(--trans);
@@ -22,24 +27,33 @@
   background-color: var(--dark-hvr);
 }
 
-.apod {
+.apod,
+.neo,
+.home,
+.profile {
   background: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=893&q=80);
 }
 
 .explore-content {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   gap: 0.5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  /* border: 1px solid red; */
 }
 
 .explore-content h1 {
   font-size: 20px;
+}
+
+.explore-content div {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
 }
 
 .explore-content img {
@@ -55,12 +69,40 @@
   margin: 0 0 0.75rem;
 }
 
+.apod-detail p,
+.neo-detail p {
+  color: white;
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+
+.apod-detail p {
+  text-align: justify;
+}
+
+.apod-detail,
+.neo-detail {
+  padding: 5rem 1rem;
+  height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.apod-detail h2,
+.neo-detail h2 {
+  color: white;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+}
+
 header {
   width: 100%;
   font-size: 12px;
   position: fixed;
   top: 0%;
   /* border-bottom: 1px white solid; */
+  padding: 1rem;
   z-index: 10;
   background: var(--dark);
 }
@@ -79,24 +121,65 @@ header h1 {
   text-align: center;
 }
 
-.right-arrow {
-  position: absolute;
-  top: 47%;
-  right: 5px;
-  font-size: 2.5rem;
+.neo h2 {
   color: white;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
+  padding-top: 5.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 
-.left-arrow {
-  position: absolute;
-  top: 47%;
-  left: 5px;
-  font-size: 2.5rem;
+.neo-content {
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  gap: 1rem;
+}
+
+.neo-list {
+  border: 1px solid var(--blue);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.neo-list h3 {
   color: white;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
+}
+
+.neo-list p {
+  color: white;
+}
+
+.profile {
+  height: 100vh;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem 5rem;
+  color: white;
+  max-width: 425px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.profile-content a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.profile-content img {
+  width: 200px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: var(--blue);
+  border-radius: 50%;
 }

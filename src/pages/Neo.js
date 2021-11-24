@@ -34,25 +34,32 @@ export default function Neo(props) {
   const neoList = neo === undefined || null ? [] : neo[Object.keys(neo)[0]]
 
   return (
-    <div>
-      <h1>Near Earth Objects</h1>
-      <h2>In {START_DATE}</h2>
-      {neoList.map((n) => {
-        return (
-          <div key={n.id}>
+    <div className="neo">
+      <header>
+        <h1>Near Earth Objects</h1>
+      </header>
+      <h2>Date: {START_DATE}</h2>
+      <div className="neo-content">
+        {neoList.map((n) => {
+          return (
             <NavLink
               to={`/neo/${n.id}`}
               onClick={() => history.push(`/neo/${n.id}`)}
+              className="link"
+              key={n.id}
             >
-              <p>{n.name}</p>
+              <div className="neo-list">
+                <h3>Asteroid:</h3>
+                <p>{n.name}</p>
+                {/* <p>
+                Hazardous:{' '}
+                {n.is_potentially_hazardous_asteroid === true ? 'Yes' : 'No'}
+              </p> */}
+              </div>
             </NavLink>
-            <p>
-              Hazardous:{' '}
-              {n.is_potentially_hazardous_asteroid === true ? 'Yes' : 'No'}
-            </p>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }

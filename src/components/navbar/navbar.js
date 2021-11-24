@@ -11,8 +11,8 @@ export default function navbar() {
       <NavLink to="/" className="link nav-link">
         <AiFillHome className="icon" /> Home
       </NavLink>
-      <NavLink to="/explore" className="link nav-link">
-        <MdExplore className="icon" /> Explore
+      <NavLink to="/apod" className="link nav-link">
+        <MdExplore className="icon" /> APOD
       </NavLink>
       <NavLink to="/neo" className="link nav-link">
         <GiAsteroid className="icon" /> NEO

@@ -2,15 +2,21 @@ import React from 'react'
 import { useParams } from 'react-router'
 
 export default function ApodDetail() {
-  const { apodImg, apodTitle, apodExplanation } = useParams()
+  const { apodTitle, apodExplanation } = useParams()
   //   console.log(apodTitle, apodExplanation)
 
   return (
-    <div>
-      <h1>apod detail</h1>
-      <img src={apodImg} alt="" />
-      <p>{apodTitle}</p>
-      <p>{apodExplanation}</p>
+    <div className="apod">
+      <header>
+        <h1>APOD Explanation</h1>
+      </header>
+      <div className="apod-detail">
+        <h2>{apodTitle}</h2>
+        <p>
+          <strong>Explanation:</strong>
+        </p>
+        <p>{apodExplanation}</p>
+      </div>
     </div>
   )
 }
